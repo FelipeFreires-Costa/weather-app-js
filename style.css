@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    /* Box Sizing garante que padding e border não aumentem a largura total do elemento */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Fundo suave, quase branco, para não cansar a vista */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos (header, main, footer) em uma única coluna vertical */
+    min-height: 100vh;      /* 'vh' significa viewport height (altura da tela visível) */
+    
+    /* Seu estilo de fundo e fonte continua aqui */
+    background-color: #f4f4f4; 
+    font-family: 'montserrat', sans-serif;
+    color: #333; /* Texto principal em cinza escuro */
+}
+
+/* Centraliza o conteúdo principal na tela */
+.app-container {
+    max-width: 900px; /* Limita a largura máxima em telas grandes */
+    margin: 0 auto;   /* Centraliza o bloco principal */
+    padding: 0 20px;  /* Um pouco de espaço nas laterais */
+    flex-grow: 1;
+    width: 100%;
+}
+
+.titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaço entre os links */
+}
+
+/* --------------------------------- */
+/* 3. Estilos para o Formulário de Busca */
+/* --------------------------------- */
+#busca-form {
+    margin-bottom: 30px;
+    /* Usa Flexbox para alinhar input e botão na mesma linha */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#cidade-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%; /* Ocupa a maior parte do espaço */
+    max-width: 400px;
+}
+
+#clima-form button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul para o botão principal */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clima-form button:hover{
+  background-color: #3f9cff;
+}
+
+/* --------------------------------- */
+/* 4. Estilos para o Resultado */
+/* --------------------------------- */
+#resultado-clima {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 150px; /* Garante que a caixa não suma quando está vazia */
+}
+
+#resultado-clima h3 {
+    margin: 0 0 20px 0;
+    color: #2c3e50; /* Um azul mais escuro para o título do resultado */
+}
+
+#resultado-clima p {
+  margin-bottom: 10px;
+
+}
+
+.main-footer {
+    background-color: #333; /* Fundo escuro para separar */
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px; /* Um pequeno espaço acima do rodapé */
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Separa o copyright dos links */
+    align-items: center;
+}
+
+.footer-links a {
+    color: #aaa; /* Cor dos links de contato */
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
